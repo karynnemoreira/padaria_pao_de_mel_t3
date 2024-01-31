@@ -3,7 +3,7 @@ import Caramelo from "./padaria.png"
 
 function Header() {
     return (
-        <>
+        <header>
             <nav>
                 <img src={Caramelo} alt="" />
                 <ul>
@@ -16,7 +16,7 @@ function Header() {
 
 
             {/* <img src="https://i.pinimg.com/originals/35/73/ec/3573ecf93035e51e53049dcfb3472b89.jpg" alt="" /> */}
-        </>
+        </header>
     )
 }
 export default Header
