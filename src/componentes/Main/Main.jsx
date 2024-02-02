@@ -1,16 +1,44 @@
-import React from "react"
+import React, {useState} from "react" //Chamando o hook useState
+import Paocomovo from "./paocomovo.jpg" //importando da pasta main a imagem pão com ovo
 
-function Main(){
-    return(
+function Main() { //componente funcional 
+
+    //1º criar uma const
+    //2º criar um array [ , ] que vai guardar duas coisas [estado , setEstado]
+    //3º receber = o hook useState()
+    //4º dentro do () colocar o valor inicial
+
+    const [numero, setNumero] = useState(0) 
+// const [a coisa, habilidade de mudar essa coisa] = useState(valor inicial)
+
+//-------------Criando a função para adicionar 1 valor - SEM CONDIÇÃO
+
+// function Adicionar(){
+//     setNumero(numero + 1) 
+//     //setNumero altera o estado (numero), então: setNumero(pega o estado "numero" e some 1 valor a ele)
+// }
+
+//---------CRIANDO FUNÇÃO COM ARROW FUNCTION , COM CONDIÇÃO
+
+const Adicionar = ()=>{
+    if(numero < 10){
+        setNumero(numero + 1)
+    }
+}
+
+
+
+
+
+
+    return ( //retornando o html
         <main>
-
-<div className="card"> 
-<img className="paocomovo" src="https://assets.delirec.com/images/TEraLXukRvSC6KZhK84YbeBgprI3/recipe/08ea8269-1149-49d5-8de5-572962e1f8fd-P%C3%A3o-com-Ovo-Fit--gallery-0" alt="" />
-<h3>R$6,00</h3>
-<button>COMPRAR</button>
-
-</div>
-
+            <div className="card">
+                <img className="paocomovo" src={Paocomovo} alt="" />
+                <h3>R$6,00</h3>
+                <button onClick={Adicionar}>COMPRAR</button>
+                <h2> {numero} </h2>
+            </div>
         </main>
     )
 }
