@@ -11,6 +11,7 @@ function Header() {
                     <li>Contatos</li>
                     <li>Encomendas</li>
                     <li>Unidades</li>
+                    <li> <a href="https://icons8.com.br/" target="_blank">Icones </a> </li>
                 </ul>
             </nav>
 
